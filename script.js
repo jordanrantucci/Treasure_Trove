@@ -1,13 +1,26 @@
 $(document).ready(function() {
     //Bing Maps API
     let apiKey = config.key
-    let userLocation = ""
-    let queryURL = "https://bing.com/maps/default.aspx?cp="+userLocation+"&style=h"+"&sp=point."+latitude+"_"+longitude+"_"+picTitle+"_"+refURL+"_"+photoURL
+    let ipapiURL = "https://ipapi.co/8.8.8.8/json/"
+
 
     $.ajax({
-        url: queryURL,
+        url: ipapiURL,
         method: "GET"
     }).then(function(response){
+        let userLocation = response.latitude+"~"+response.longitude
+        let pointLatitude = ""
+        let pointLongitude = ""
+        let picTitle = ""
+        let refURL = ""
+        let photoURL = ""
+        let queryURL = "https://bing.com/maps/default.aspx?cp="+userLocation+"&style=h"+"&sp=point."+pointLatitude+"_"+pointLongitude+"_"+picTitle+"_"+refURL+"_"+photoURL
         
+        $.ajax({
+            url: queryURL,
+            method= "GET"
+        }).then(function(response2){
+            
+        })
     })
 })
