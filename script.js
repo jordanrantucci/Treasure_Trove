@@ -1,9 +1,10 @@
 $(document).ready(function() {
     //Bing Maps API
     let apiKey = config.key
+    let apiKey2 = config2.key
     let ipapiURL = "https://ipapi.co/8.8.8.8/json/"
-    let gyazoURL = "" //nick
-
+    let flickrURL = " https://api.flickr.com/services/rest/?method=flickr.photos.getWithGeoData&api_key="+apiKey2+"&per_page=10&format=json&nojsoncallback=1" //nick
+    
 
     $.ajax({
         url: ipapiURL,
@@ -11,7 +12,7 @@ $(document).ready(function() {
     }).then(function(response){
         let userLocation = response.latitude+"~"+response.longitude
         $.ajax({
-            url: gyazoURL="",
+            url: flickrURL="",
             method: "GET"
         }).then(function(response2){
         let pointLatitude = response2.something //nick
