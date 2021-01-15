@@ -3,7 +3,7 @@ h1 {
     color:rgb(8, 8, 8);
 }
 nav{
-  background-image: url("map2.jpg"); /* The image used */
+  background-image: url("pictures/map2.jpg"); /* The image used */
   background-color: #d6b8a0; /* Used if the image is unavailable */
   height: 100px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -23,9 +23,35 @@ body {
   color: #333;
 
   /* Visual */
-  background-image: url("map2.jpg"); /* The image used */
-  background-color: #d6b8a0; /* Used if the image is unavailable */
+  background-image: url("pictures/map2.jpg"); /* The image used */
+  background-color: #e4af83; /* Used if the image is unavailable */
   height: 100px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+form{
+  background-color: #edbf9a;
+    /* Positioning */
+    position: sticky;
+    left: 150px;
+    width: 320px;
+    padding: 10px;
+    border: 5px solid rgb(19, 17, 17);
+    margin: 0;
+    font-family: 'Pirata One', cursive; 
+}
+blockquote{
+  /* Positioning */
+  position: absolute; top: 0; right: 0; width: 100px; text-align:center;
+  font-family: 'Pirata One', cursive;
+  width: 320px;
+  padding: 10px;
+  border: 5px solid rgb(19, 17, 17);
+  margin: 0;
+
+  /* Typography */
+  color: #333;
+
+  /* Visual */
+  background-color: #d6b8a0;
 }
