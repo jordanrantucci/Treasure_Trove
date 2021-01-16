@@ -2,7 +2,7 @@
 Project 1 Team Build Treasure Trove 
 
 This is a CWRU coding bootcamp Project 1 Assignment.  This project is to show that the students are able to work in a team setting, come up with an original idea and
-collaborate together to develop a project.
+collaborate together to develop a project.  This project demonstrates the students ability to become comfortable working 
 
 ## User Story
 
