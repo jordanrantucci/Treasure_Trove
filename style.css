@@ -1,9 +1,13 @@
 h1 {
     font-family: 'Pirata One', cursive;
     color:rgb(8, 8, 8);
+    text-align:center;
+
 }
 nav{
-  background-image: url("map2.jpg"); /* The image used */
+  font-family: 'Pirata One', cursive;
+    color:rgb(8, 8, 8);
+  background-image: url("pictures/map2.jpg"); /* The image used */
   background-color: #d6b8a0; /* Used if the image is unavailable */
   height: 100px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -23,9 +27,44 @@ body {
   color: #333;
 
   /* Visual */
-  background-image: url("map2.jpg"); /* The image used */
-  background-color: #d6b8a0; /* Used if the image is unavailable */
-  height: 100px; /* You must set a specified height */
+  background-image: url("pictures/map2.jpg"); /* The image used */
+  background-color: #e4af83; /* Used if the image is unavailable */
+  height: 500px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
+}
+form{
+  opacity: 1;
+   filter: alpha(opacity=53); /* For Internet Explorer 8 and earlier */
+    /* Positioning */
+    position: static;
+    border: lightslategray;
+    left: 150px;
+    width: 320px;
+    padding: 10px;
+    margin: 0;
+    font-family: 'Pirata One', cursive; 
+    block-size: content-box;
+}
+blockquote{
+  opacity: 1;
+  filter: alpha(opacity=30); /* For Internet Explorer 8 and earlier */
+  /* Positioning */
+  position: absolute; top: 0; right: 0; width: 100px; text-align:center;
+  font-family: 'Pirata One', cursive;
+  width: 320px;
+  padding: 10px;
+  margin: 0;
+
+  /* Typography */
+  color: rgb(2, 1, 1);
+}
+button{
+  font-family: 'Pirata One', cursive;
+}
+p{
+  font-family: 'Pirata One', cursive;
+    color:rgb(8, 8, 8);
+    text-align:center;
+}
 }
