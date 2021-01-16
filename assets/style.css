@@ -68,3 +68,11 @@ footer{
   margin-right: auto;
   width: 50%;
 }
+legend{
+  font-family: 'Pirata One', cursive;
+  color:rgb(8, 8, 8);
+}
+form{
+  font-family: 'Pirata One', cursive;
+  color:rgb(8, 8, 8);
+}
