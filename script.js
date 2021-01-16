@@ -8,25 +8,36 @@
         
 //     });            
 // }
-function GetMap()
-{
-    var map = new Microsoft.Maps.Map('#myMap', {
-        credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
-        center: new Microsoft.Maps.Location(47.6149, -122.1941)
-    });
+function locateTreasure(){
 
-    var center = map.getCenter();
+    function GetMap()
+    {
+        let latitude = $("#latitude").val()
+        let longitude = $("#longitude").val()
 
-    //Create custom Pushpin
-    var pin = new Microsoft.Maps.Pushpin(center, {
-        title: 'Old Quarter',
-        subTitle: 'Found old quarter made of silver',
-        
-    });
+        let map = new Microsoft.Maps.Map('#myMap', {
+            credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
+            center: new Microsoft.Maps.Location(longitude, latitude)
+        });
 
-    //Add the pushpin to the map
-    map.entities.push(pin);
+        let center = map.getCenter();
+
+        //Create custom Pushpin
+        let pin = new Microsoft.Maps.Pushpin(center, {
+            title: 'Old Quarter',
+            subTitle: 'Found old quarter made of silver',
+            
+        });
+
+        //Add the pushpin to the map
+        map.entities.push(pin);
+    }
+
+    GetMap()
 }
+
+$("#locateTreasure").on("click", locateTreasure)
+
 
 $("#treasure-btn").on("click", function() {
     var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
