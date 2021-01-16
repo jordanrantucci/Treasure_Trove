@@ -10,9 +10,22 @@
 // }
 function GetMap()
 {
-    var map = new Microsoft.Maps.Map('#myMap');
+    var map = new Microsoft.Maps.Map('#myMap', {
+        credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
+        center: new Microsoft.Maps.Location(47.6149, -122.1941)
+    });
 
-    //Add your post map load code here.
+    var center = map.getCenter();
+
+    //Create custom Pushpin
+    var pin = new Microsoft.Maps.Pushpin(center, {
+        title: 'Old Quarter',
+        subTitle: 'Found old quarter made of silver',
+        
+    });
+
+    //Add the pushpin to the map
+    map.entities.push(pin);
 }
 
 
