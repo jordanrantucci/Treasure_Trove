@@ -5,9 +5,8 @@ h1 {
 
 }
 nav{
-  font-family: 'Pirata One', cursive;
-    color:rgb(8, 8, 8);
-  background-image: url("pictures/map2.jpg"); /* The image used */
+  font-size: 24px;
+  background-image: url("map2.jpg"); /* The image used */
   background-color: #d6b8a0; /* Used if the image is unavailable */
   height: 100px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
@@ -67,4 +66,8 @@ p{
     color:rgb(8, 8, 8);
     text-align:center;
 }
+}
+
+.navbar-brand{
+  font-size: 24px;
 }
