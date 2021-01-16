@@ -26,7 +26,7 @@ body {
   color: #333;
 
   /* Visual */
-  background-image: url("pictures/map2.jpg"); /* The image used */
+  background-image: url("map2.jpg"); /* The image used */
   background-color: #e4af83; /* Used if the image is unavailable */
   height: 500px; /* You must set a specified height */
   background-repeat: no-repeat; /* Do not repeat the image */
