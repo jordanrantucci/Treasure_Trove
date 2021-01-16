@@ -29,8 +29,7 @@ function GetMap()
 }
 
 $("#treasure-btn").on("click", function() {
-    var apiKey2 = config2.key
-    var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id="+apiKey2;
+    var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
 
     $.ajax({
         url: unsplashURL,
