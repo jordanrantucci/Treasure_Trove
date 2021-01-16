@@ -33,43 +33,52 @@
         </nav>
     
 
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            <ul class="navbar-nav mr-auto">
-                <li class="nav-item active">
-                    <a class="nav-link" href="map.html">Map <span class="sr-only">(current)</span></a>
-                </li>
-                <li class="nav-item active">
-                    <a class="nav-link" href="treasurechest.html">Treasure Chest <span class="sr-only">(current)</span></a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="map.html">Map <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="treasurechest.html">Treasure Chest <span class="sr-only">(current)</span></a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
 
 
-<h1>Show where ye discovered yer booty!</h1>
+    <h1>Show where ye discovered yer booty!</h1>
 
-<div class = "text-box">
-    <p>Use th' map below t' see th' locations o' th' treasure</p>
-</div>
+    <div class = "text-box">
+        <p>Use th' map below t' see th' locations o' th' treasure</p>
+    </div>
 
-<form>
-    <fieldset class="text-box" style="width: 12rem">
-        <legend>Enter the Treasures location</legend>
-        <p>
-            <label>Longitude as displayed on the map</label>
-            <input type="text" id="myText" value="text here" />
-        </p>
-    </fieldset>
-    <fieldset class="text-box" style="width: 12rem">
-        <p>
-            <label>Latitude as displayed on the map</label>
-            <input type="text" id="myText" value="text here" />
-        </p>
-        <button type="button" class="btn btn-dark">Locate Treasure</button>
-    </fieldset>
-</form>
-<footer>
-    <p>What is a pirates favorite letter? **click treasure chest to see the answer**</p>
-</footer>
+    <form>
+        <fieldset class="text-box" style="width: 12rem">
+            <legend>Enter the Treasure's location</legend>
+            <p>
+                <label>Longitude as displayed on the map</label>
+                <input type="text" id="myText" value="text here" />
+            </p>
+        </fieldset>
+        <fieldset class="text-box" style="width: 12rem">
+            <p>
+                <label>Latitude as displayed on the map</label>
+                <input type="text" id="myText" value="text here" />
+            </p>
+            <button type="button" class="btn btn-dark">Locate Treasure</button>
+        </fieldset>
+    </form>
 
+    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
+    </div>
+    
+    <footer>
+        <p>What is a pirate's favorite letter? **click treasure chest to see the answer**</p>
+    </footer>
+    <script type='text/javascript'
+            src='http://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd' 
+            async defer>
+    </script>
+    <script type='text/javascript' src='./script.js'></script>
+    </body>
 </html>
