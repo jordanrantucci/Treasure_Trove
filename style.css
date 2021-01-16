@@ -3,6 +3,7 @@ h1 {
     color:rgb(8, 8, 8);
 }
 nav{
+  font-size: 24px;
   background-image: url("map2.jpg"); /* The image used */
   background-color: #d6b8a0; /* Used if the image is unavailable */
   height: 100px; /* You must set a specified height */
@@ -54,4 +55,8 @@ blockquote{
 
   /* Visual */
   background-color: #d6b8a0;
+}
+
+.navbar-brand{
+  font-size: 24px;
 }
