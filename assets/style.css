@@ -33,31 +33,10 @@ body {
   background-repeat: no-repeat; /* Do not repeat the image */
   background-size: cover; /* Resize the background image to cover the entire container */
 }
-form{
-  opacity: 1;
+image{
+  opacity: .4;
    filter: alpha(opacity=53); /* For Internet Explorer 8 and earlier */
-    /* Positioning */
-    position: static;
-    border: lightslategray;
-    left: 150px;
-    width: 320px;
-    padding: 10px;
-    margin: 0;
     font-family: 'Pirata One', cursive; 
-    block-size: content-box;
-}
-blockquote{
-  opacity: 1;
-  filter: alpha(opacity=30); /* For Internet Explorer 8 and earlier */
-  /* Positioning */
-  position: absolute; top: 0; right: 0; width: 100px; text-align:center;
-  font-family: 'Pirata One', cursive;
-  width: 320px;
-  padding: 10px;
-  margin: 0;
-
-  /* Typography */
-  color: rgb(2, 1, 1);
 }
 button{
   font-family: 'Pirata One', cursive;
@@ -67,8 +46,25 @@ p{
     color:rgb(8, 8, 8);
     text-align:center;
 }
-
+footer{
+  font-family: 'Pirata One', cursive;
+    color:rgb(8, 8, 8);
+    text-align:center;
+}
 
 .navbar-brand{
   font-size: 24px;
+}
+.center{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.text-box{
+  font-family: 'Pirata One', cursive;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
 }
