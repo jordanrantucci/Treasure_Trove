@@ -1,8 +1,20 @@
 $(document).ready(function(){
+    
     let loadImage = $("<img>")
     loadImage.attr("src", "assets/images/treasuresack.png")
     $(".image-container").append(loadImage)
 })
+
+let savedTreasureArray= []
+
+for(i=0;i<localStorage.getItem("Number of Treasures");i++){
+//get local storage upon page load and enter into saved treasure locations div
+    let pastLocationDiv = $("<div>")
+    pastLocationDiv.attr("class", "pastLocationDiv")
+    pastLocationDiv.text("Treasure Title: "+localStorage.getItem("Title"+(i+1))+", Treasure Description: "+localStorage.getItem("Description"+(i+1))+", Latitude: "+localStorage.getItem("Latitude"+(i+1))+", Longitude: "+localStorage.getItem("Longitude"+(i+1))+", Address: " + localStorage.getItem("Address"+(i+1)))
+    $("#pastLocationsDivOnly").append(pastLocationDiv)
+}
+
 
 function clearTitle(){
     $("#treasureTitle").val(" ")
@@ -18,23 +30,46 @@ function clearLat(){
 }
 
 
-function locateTreasure(){
+$("#treasureTitle").on("click", clearTitle)
+$("#treasureDescription").on("click", clearDescription)
+$("#longitude").on("click", clearLong)
+$("#latitude").on("click", clearLat)
 
+
+function locateTreasure(){
+    //push treasure to array
+    savedTreasureArray.push("a")
+
+    
     function GetMap(){
+
+        
         //create map
         let map = new Microsoft.Maps.Map('#myMap', {
             credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
-            center: new Microsoft.Maps.Location($("#longitude").val(), $("#latitude").val())
+            center: new Microsoft.Maps.Location($("#latitude").val(), $("#longitude").val())
         });
-        console.log($("#longitude").val(),$("#latitude").val())
-        //save other treasure locations
-        let pastLocationDiv = $("<div>")
-        pastLocationDiv.attr("class", "pastLocationdiv")
-        pastLocationDiv.text("Longitude: " + $("#longitude").val() + "  Latitude: " + $("#latitude").val())
-        $("#pastLocations").append(pastLocationDiv)
+        console.log($("#latitude").val(),$("#longitude").val())
 
-        //append map
         let center = map.getCenter();
+
+        let bingAPIurl= "https://dev.virtualearth.net/REST/v1/Locations/"+$("#latitude").val().toString()+","+$("#longitude").val().toString()+"?o=json&key=Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd"
+                
+        $.ajax({
+            url: bingAPIurl,
+            method: "GET"
+        })
+    
+        .then(function(response2) {
+            //display past treasure locations
+            console.log(response2.resourceSets[0].resources[0].address.formattedAddress)
+            let pastLocationDiv = $("<div>")
+            pastLocationDiv.attr("class", "pastLocationDiv")
+            pastLocationDiv.text("Treasure Title: "+$("#treasureTitle").val()+", Treasure Description: "+$("#treasureDescription").val()+", Latitude: "+$("#latitude").val()+", Longitude: "+$("#longitude").val()+", Address: " + (response2.resourceSets[0].resources[0].address.formattedAddress))
+            $("#pastLocationsDivOnly").append(pastLocationDiv)
+            //set local storage for the address retrieved from the ajax request
+            localStorage.setItem("Address"+savedTreasureArray.length, response2.resourceSets[0].resources[0].address.formattedAddress)
+        })
 
 
         //Create an infobox at the center of the map but don't show it.
@@ -44,28 +79,46 @@ function locateTreasure(){
         //Assign the infobox to a map instance.
         infobox.setMap(map);
 
-        //create array
-        let randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(5,map.getBounds())
 
-        for(var i=0; i < randomLocations.length; i++){
-            //Create custom Pushpin
-            let pin = new Microsoft.Maps.Pushpin(center, {
-                icon: './assets/images/x.png',
-                anchor: new Microsoft.Maps.Point(20, 20),            
-            });
-        
-            //Store some metadata with the pushpin.
-            pin.metadata = {
-                title: $("#treasureTitle").val()[i],
-                description: $("#treasureDescription").val()[i]
-            };
+       
+        //Create custom Pushpin
+        let pin = new Microsoft.Maps.Pushpin(center, {
+            icon: './assets/images/x.png',
+            anchor: new Microsoft.Maps.Point(20, 20),           
+            draggable: true 
+        })
+    
+        //Store some metadata with the pushpin.
+        pin.metadata = {
+            title: $("#treasureTitle").val(),
+            description: $("#treasureDescription").val()
+        };
 
-            //Add a click event handler to the pushpin.
-            Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
-
-            //Add pushpin to the map.
-            map.entities.push(pin);
+        for (i=0; i<savedTreasureArray.length; i++){
+            //Set local storage to save treasure info
+            localStorage.setItem("Title"+savedTreasureArray.length, pin.metadata.title)
+            localStorage.setItem("Description"+savedTreasureArray.length, pin.metadata.description)
+            localStorage.setItem("Latitude"+savedTreasureArray.length, $("#latitude").val())
+            localStorage.setItem("Longitude"+savedTreasureArray.length, $("#longitude").val())
+            localStorage.setItem("Number of Treasures", savedTreasureArray.length)
         }
+        
+        //Add a click event handler to the pushpin.
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+
+        //Add pushpin to the map.
+        map.entities.push(pin);
+
+        Microsoft.Maps.Events.addHandler(pin, 'drag', function (e) { 
+            locate('pushpinDrag', e)
+        })
+
+        //show location of pin
+        function locate(id, event) {
+            $('#pinLocation').text(event.target.getLocation())
+        }
+      
+        
     }
 
     function pushpinClicked(e) {
@@ -85,20 +138,19 @@ function locateTreasure(){
     GetMap()
 }
 
+
+
 //create function for clear button
 function clearBtnClk(){
     if(confirm("Are you sure you want to clear all pins?")){
         localStorage.clear()
+        $("#pastLocationsDivOnly").empty()
     }
     else {
     }
 
 }
 
-$("#treasureTitle").on("click", clearTitle)
-$("#treasureDescription").on("click", clearDescription)
-$("#longitude").on("click", clearLong)
-$("#latitude").on("click", clearLat)
 $("#locateTreasure").on("click", locateTreasure)
 $("#clearLocations").on("click", clearBtnClk)
 

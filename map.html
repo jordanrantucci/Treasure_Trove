@@ -46,14 +46,15 @@
         </nav>
 
 
-    <h1>Show where ye discovered yer booty!</h1>
+    <h1 class="col-12">Show where ye discovered yer booty!</h1>
 
-    <div class = "text-box">
-        <p>Use th' map below t' see th' locations o' th' treasure</p>
+    <div class = "text-box col-12">
+        <h2>Use th' map below t' see th' locations o' th' treasure</h2>
     </div>
 
     <container class="row">
-        <form id="mapLocationForm" class="col-6">
+        <div class="col-1"></div>
+        <form id="mapLocationForm" class="col-5">
             <fieldset class="text-box col-6">
                 <h3>Enter Treasure Information</h3>
                 <p>
@@ -78,12 +79,18 @@
                 <button type="button" class="btn btn-light" id="clearLocations">Clear All Treasure Pins</button>
             </fieldset>
         </form>
-        <container class="col-6" id="pastLocations">
+        <container class="col-5" id="pastLocations">
             <h3>Saved Treasure Locations</h3>
+            <div id="pastLocationsDivOnly"></div>
         </container>
+        <div class="col-1"></div>
     </container>
+    <div class="row" id="pinLocationDiv">
+        <h3 class="col-9" id="dragInstructions"><br>Not quite right? Click and drag the X to do some fine-tuning. Once you're in the right spot, re-enter the coordinates above and Locate ye' treasure!</h3>
+        <h4 class="col-12">Pin Location: <span id="pinLocation"></span></h4>
+    </div>
 
-    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto;padding:5%">
+    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
     </div>
     
     <footer>
