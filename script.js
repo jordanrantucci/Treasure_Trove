@@ -12,20 +12,18 @@ function locateTreasure(){
 
     function GetMap()
     {
-        let latitude = $("#latitude").val()
-        let longitude = $("#longitude").val()
 
         let map = new Microsoft.Maps.Map('#myMap', {
             credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
-            center: new Microsoft.Maps.Location(longitude, latitude)
+            center: new Microsoft.Maps.Location($("#longitude").val(), $("#latitude").val())
         });
 
         let center = map.getCenter();
 
         //Create custom Pushpin
         let pin = new Microsoft.Maps.Pushpin(center, {
-            title: 'Old Quarter',
-            subTitle: 'Found old quarter made of silver',
+            title: $("#treasureTitle").val(),
+            subTitle: $("#treasureDescription").val(),
             
         });
 
