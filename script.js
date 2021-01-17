@@ -4,35 +4,103 @@ $(document).ready(function(){
     $(".image-container").append(loadImage)
 })
 
+function clearTitle(){
+    $("#treasureTitle").val(" ")
+}
+function clearDescription(){
+    $("#treasureDescription").val(" ")
+}
+function clearLong(){
+    $("#longitude").val(" ")
+}
+function clearLat(){
+    $("#latitude").val(" ")
+}
 
 
 function locateTreasure(){
 
-    function GetMap()
-    {
-
+    function GetMap(){
+        //create map
         let map = new Microsoft.Maps.Map('#myMap', {
             credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
             center: new Microsoft.Maps.Location($("#longitude").val(), $("#latitude").val())
         });
+        console.log($("#longitude").val(),$("#latitude").val())
+        //save other treasure locations
+        let pastLocationDiv = $("<div>")
+        pastLocationDiv.attr("class", "pastLocationdiv")
+        pastLocationDiv.text("Longitude: " + $("#longitude").val() + "  Latitude: " + $("#latitude").val())
+        $("#pastLocations").append(pastLocationDiv)
 
+        //append map
         let center = map.getCenter();
 
-        //Create custom Pushpin
-        let pin = new Microsoft.Maps.Pushpin(center, {
-            title: $("#treasureTitle").val(),
-            subTitle: $("#treasureDescription").val(),
-            
-        });
 
-        //Add the pushpin to the map
-        map.entities.push(pin);
+        //Create an infobox at the center of the map but don't show it.
+        infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
+            visible: false
+        });
+        //Assign the infobox to a map instance.
+        infobox.setMap(map);
+
+        //create array
+        let randomLocations = Microsoft.Maps.TestDataGenerator.getLocations(5,map.getBounds())
+
+        for(var i=0; i < randomLocations.length; i++){
+            //Create custom Pushpin
+            let pin = new Microsoft.Maps.Pushpin(center, {
+                icon: './assets/images/x.png',
+                anchor: new Microsoft.Maps.Point(20, 20),            
+            });
+        
+            //Store some metadata with the pushpin.
+            pin.metadata = {
+                title: $("#treasureTitle").val()[i],
+                description: $("#treasureDescription").val()[i]
+            };
+
+            //Add a click event handler to the pushpin.
+            Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+
+            //Add pushpin to the map.
+            map.entities.push(pin);
+        }
     }
+
+    function pushpinClicked(e) {
+        //Make sure the infobox has metadata to display.
+        if (e.target.metadata) {
+            //Set the infobox options with the metadata of the pushpin.
+            infobox.setOptions({
+                location: e.target.getLocation(),
+                title: e.target.metadata.title,
+                description: e.target.metadata.description,
+                visible: true
+            });
+        }
+    }
+    
 
     GetMap()
 }
 
+//create function for clear button
+function clearBtnClk(){
+    if(confirm("Are you sure you want to clear all pins?")){
+        localStorage.clear()
+    }
+    else {
+    }
+
+}
+
+$("#treasureTitle").on("click", clearTitle)
+$("#treasureDescription").on("click", clearDescription)
+$("#longitude").on("click", clearLong)
+$("#latitude").on("click", clearLat)
 $("#locateTreasure").on("click", locateTreasure)
+$("#clearLocations").on("click", clearBtnClk)
 
 
 $("#treasure-btn").on("click", function() {
