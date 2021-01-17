@@ -1,13 +1,11 @@
-// function loadMapScenario() {
-//     var map = new Microsoft.Maps.Map(document.getElementById('myMap'), {});
-//     var map = new Microsoft.Maps.Map('#myMap', {
-//         credentials: 'Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd',
-//         center: new Microsoft.Maps.Location(51.50632, -0.12714),
-//         mapTypeId: Microsoft.Maps.MapTypeId.aerial,
-//         zoom: 10
-        
-//     });            
-// }
+$(document).ready(function(){
+    let loadImage = $("<img>")
+    loadImage.attr("src", "assets/images/treasuresack.png")
+    $(".image-container").append(loadImage)
+})
+
+
+
 function locateTreasure(){
 
     function GetMap()
@@ -38,6 +36,7 @@ $("#locateTreasure").on("click", locateTreasure)
 
 
 $("#treasure-btn").on("click", function() {
+    $(".image-container").empty()
     var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
 
     $.ajax({
