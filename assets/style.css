@@ -1,6 +1,10 @@
 h1 {
     font-family: 'Pirata One', cursive;
     color:rgb(8, 8, 8);
+      -webkit-text-fill-color: black;
+      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-color: white;
+    font-size: 48px;
     text-align:center;
 
 }
@@ -43,6 +47,7 @@ button{
 }
 p{
   font-family: 'Pirata One', cursive;
+  font-size: 24px;
     color:rgb(8, 8, 8);
     text-align:center;
 }
@@ -55,6 +60,16 @@ footer{
 .navbar-brand{
   font-size: 24px;
 }
+
+.navbar-light .navbar-brand {
+    color: rgba(0,0,0,.9);
+    font-size: 24px;
+}
+
+.treasure-chest-title{
+  font-size: 48px;
+}
+
 .center{
   display: block;
   margin-left: auto;
@@ -84,4 +99,9 @@ form{
   margin-right: auto;
   max-height: inherit;
   max-width: fit-content;
+}
+
+#treasure-form{
+  padding: 20px;
+  margin-left: 27%;
 }
