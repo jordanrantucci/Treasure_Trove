@@ -6,14 +6,12 @@ collaborate together to develop a project.  This project demonstrates the studen
 
 ## User Story
 
-```
 This app was designed for treasure hunters to save locations of where they discovered their treasures.  The app also displays potential treasures that treasure
 hunters can find with the treasure chest section.  
-```
+
 
 ## Acceptance Criteria
 
-```
 The application utilizes a CSS framework other than Bootstrap.
 The application is deployed to GitHub.
 There was interaction throughout the project and fantastic communication throughout the group.
@@ -22,7 +20,6 @@ No alerts, confirms, or promts are used.
 App is responsive and easy to use.
 We worked together to make sure we made many GitHub commits and were sure to review work in order to eliminate any merge issues.
 
-```
 
 Deployed application link: (https://jordanrantucci.github.io/Project_1_Treasure_Trove/)
 
