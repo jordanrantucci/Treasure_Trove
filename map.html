@@ -54,22 +54,34 @@
 
     <form>
         <fieldset class="text-box" style="width: 12rem">
-            <legend>Enter the Treasure's location</legend>
+            <legend>Enter Treasure Information</legend>
             <p>
-                <label>Enter Longitude</label>
+                <label>Title</label>
+                <input type="text" id="treasureTitle"  value="enter title" />
+            </p>
+        </fieldset>
+        <fieldset class="text-box" style="width: 12rem">
+            <p>
+                <label>Short Description</label>
+                <input type="text" id="treasureDescription" value="enter description" />
+            </p>
+        
+            <p>
+                <label>Enter Longitude Where Found</label>
                 <input type="text" id="longitude" value="longitude" />
             </p>
         </fieldset>
         <fieldset class="text-box" style="width: 12rem">
             <p>
-                <label>Enter Latitude</label>
+                <label>Enter Latitude Where Found</label>
                 <input type="text" id="latitude" value="latitude" />
             </p>
+            
             <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
         </fieldset>
     </form>
 
-    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
+    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto;padding:5%">
     </div>
     
     <footer>
