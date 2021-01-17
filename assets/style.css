@@ -108,11 +108,27 @@ form{
 
 
 #mapLocationForm {
-  border: 2px black;
+  border: dashed 2px black;
+  text-align: center;
 }
 
 #pastLocations{
-  border: 2px black;
-  
+  border: dashed 2px black;
+  text-align: center;
 }
 
+#pastLocationDiv{
+  border: dashed 2px black;
+ text-align: center;
+}
+
+#pinLocationDiv{
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+#dragInstructions {
+  margin-left:auto;
+  margin-right:auto;
+}
