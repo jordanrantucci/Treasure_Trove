@@ -52,34 +52,36 @@
         <p>Use th' map below t' see th' locations o' th' treasure</p>
     </div>
 
-    <form>
-        <fieldset class="text-box" style="width: 12rem">
-            <legend>Enter Treasure Information</legend>
-            <p>
-                <label>Title</label>
-                <input type="text" id="treasureTitle"  value="enter title" />
-            </p>
-        </fieldset>
-        <fieldset class="text-box" style="width: 12rem">
-            <p>
-                <label>Short Description</label>
-                <input type="text" id="treasureDescription" value="enter description" />
-            </p>
-        
-            <p>
-                <label>Enter Longitude Where Found</label>
-                <input type="text" id="longitude" value="longitude" />
-            </p>
-        </fieldset>
-        <fieldset class="text-box" style="width: 12rem">
-            <p>
-                <label>Enter Latitude Where Found</label>
-                <input type="text" id="latitude" value="latitude" />
-            </p>
+    <container class="row">
+        <form id="mapLocationForm" class="col-6">
+            <fieldset class="text-box col-6">
+                <h3>Enter Treasure Information</h3>
+                <p>
+                    <label>Title</label><br>
+                    <input type="text" id="treasureTitle"  value="enter title" />
+                </p>
+                <p>
+                    <label>Short Description</label><br>
+                    <input type="text" id="treasureDescription" value="enter description" />
+                </p>
             
-            <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
-        </fieldset>
-    </form>
+                <p>
+                    <label>Enter Latitude Where Found</label><br>
+                    <input type="text" id="latitude" value="latitude" />
+                </p>
+                <p>
+                    <label>Enter Longitude Where Found</label><br>
+                    <input type="text" id="longitude" value="longitude" />
+                </p>
+                
+                <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
+                <button type="button" class="btn btn-light" id="clearLocations">Clear All Treasure Pins</button>
+            </fieldset>
+        </form>
+        <container class="col-6" id="pastLocations">
+            <h3>Saved Treasure Locations</h3>
+        </container>
+    </container>
 
     <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto;padding:5%">
     </div>
