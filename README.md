@@ -2,7 +2,7 @@
 Project 1 Team Build Treasure Trove 
 
 This is a CWRU coding bootcamp Project 1 Assignment.  This project is to show that the students are able to work in a team setting, come up with an original idea and
-collaborate together to develop a project.  This project demonstrates the students ability to become comfortable working in a group setting and learning the functionality of GitHub. This project uses the project board function and the agile software development method of GiHhub which allows for the students to create and delegate tasks.  The group members needed to communicate effectively and work together to build a functioning application.
+collaborate together to develop a project.  This project demonstrates the students ability to become comfortable working in a group setting and learning the functionality of GitHub. This project uses the project board function and the agile software development method of GitHub which allows for the students to create and delegate tasks.  The group members needed to communicate effectively and work together to build a functioning application.
 
 ## User Story
 
