@@ -1,3 +1,10 @@
+html, body{
+  background-image: url("./images/map2.jpg"); /* The image used */
+  background-color: #d6b8a0; /* Used if the image is unavailable */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover; /* Resize the background image to cover the entire container */
+}
+
 h1 {
     font-family: 'Pirata One', cursive;
     color:rgb(8, 8, 8);
@@ -7,11 +14,6 @@ h1 {
 nav{
   font-size: 24px;
   font-family: 'Pirata One', cursive;
-  background-image: url("./images/map2.jpg"); /* The image used */
-  background-color: #d6b8a0; /* Used if the image is unavailable */
-  height: 100px; /* You must set a specified height */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
 }
 body {
     /* Box-model */
@@ -25,13 +27,6 @@ body {
   font-size: 18px;
   line-height: 150%;
   color: #333;
-
-  /* Visual */
-  background-image: url("./images/map2.jpg"); /* The image used */
-  background-color: #e4af83; /* Used if the image is unavailable */
-  height: 500px; /* You must set a specified height */
-  background-repeat: no-repeat; /* Do not repeat the image */
-  background-size: cover; /* Resize the background image to cover the entire container */
 }
 image{
   opacity: .4;
@@ -75,4 +70,13 @@ legend{
 form{
   font-family: 'Pirata One', cursive;
   color:rgb(8, 8, 8);
+}
+
+#mapLocationForm {
+  border: 2px black;
+}
+
+#pastLocations{
+  border: 2px black;
+  
 }
