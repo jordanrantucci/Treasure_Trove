@@ -2,40 +2,33 @@
 Project 1 Team Build Treasure Trove 
 
 This is a CWRU coding bootcamp Project 1 Assignment.  This project is to show that the students are able to work in a team setting, come up with an original idea and
-collaborate together to develop a project.  This project demonstrates the students ability to become comfortable working 
+collaborate together to develop a project.  This project demonstrates the students ability to become comfortable working in a group setting and learning the functionality of GitHub. This project uses the project board function and the agile software development method of GiHhub which allows for the students to create and delegate tasks.  The group members needed to communicate effectively and work together to build a functioning application.
 
 ## User Story
 
 ```
-This app would be usefull for someone that was potentially traveling to a city and wanted to get the upcoming weather forecast.
+This app was designed for treasure hunters to save locations of where they discovered their treasures.  The app also displays potential treasures that treasure
+hunters can find with the treasure chest section.  
 ```
 
 ## Acceptance Criteria
 
 ```
-GIVEN a weather dashboard with form inputs
-WHEN I search for a city
-THEN I am presented with current and future conditions for that city and that city is added to the search history
-WHEN I view current weather conditions for that city
-THEN I am presented with the city name, the date, an icon representation of weather conditions, the temperature, the humidity, the wind speed, and the UV index
-WHEN I view the UV index
-THEN I am presented with a color that indicates whether the conditions are favorable, moderate, or severe
-WHEN I view future weather conditions for that city
-THEN I am presented with a 5-day forecast that displays the date, an icon representation of weather conditions, the temperature, and the humidity
+The application utilizes a CSS framework other than Bootstrap.
+The application is deployed to GitHub.
+There was interaction throughout the project and fantastic communication throughout the group.
+2 server-side APIs are used in the application (Unsplash and BING Maps)
+No alerts, confirms, or promts are used.
+App is responsive and easy to use.
+We worked together to make sure we made many GitHub commits and were sure to review work in order to eliminate any merge issues.
 
-I was not able to complete this portion of the homework by making the cities clickable
-WHEN I click on a city in the search history
-THEN I am again presented with current and future conditions for that city
-I was able to reopen the dashboard and see the previous searched city, however the content needs to be cleared upon inspection.
-WHEN I open the weather dashboard
-THEN I am presented with the last searched city forecast
 ```
 
-Deployed application link: (https://jordanrantucci.github.io/Weather-Dashboard/)
+Deployed application link: (https://jordanrantucci.github.io/Project_1_Treasure_Trove/)
 
 The following image demonstrates the application functionality:
 
-![weather dashboard demo](./Assets/Butte.jpg)
+![weather dashboard demo](./add images of the page site)
 
 
 ## Table of Contents
@@ -59,7 +52,7 @@ Download the code and open to view using your favorite browser, or click the lin
 
 ## Credits
 
-Assignment (including original code) provided by CWRU Coding Bootcamp.
+All Code was created from scratch by Diane Furlong, Amber VanGieson, Nick Reese and Jordan Rantucci
 
 
 ## Contributing
