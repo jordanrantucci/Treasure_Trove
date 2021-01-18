@@ -154,33 +154,37 @@ function clearBtnClk(){
 $("#locateTreasure").on("click", locateTreasure)
 $("#clearLocations").on("click", clearBtnClk)
 
-
+// click function for treasure button
 $("#treasure-btn").on("click", function() {
-    $(".image-container").empty()
-    var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
-
-    $.ajax({
-        url: unsplashURL,
-        method: "GET"
-    })
-
-    .then(function(response) {
-        
-        var randomNumber = Math.floor(Math.random() * 30) + 1;
-    console.log(randomNumber);
-        $("#treasure").remove()
-        // for( i=0; i < response.results.length; i++){
-        var imageUrl = response.results[randomNumber].urls.small;
-        var treasureImage = $("<img>");
-        treasureImage.attr("id", "treasure")
-        treasureImage.attr("src", imageUrl);
-        treasureImage.attr("alt", "treasure image");
-        $("#images").prepend(treasureImage);
-
-     
-    });
+    //    clears content before loading results
+        $(".image-container").empty()
+        // defining endpoint for api call
+        var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=50&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
+    // api call using ajax
+        $.ajax({
+            url: unsplashURL,
+            method: "GET"
+        })
     
-})
+        .then(function(response) {
+            // random number between 1-30
+            var randomNumber = Math.floor(Math.random() * 30) + 1;
+        //  removing initial treasure image 
+            $("#treasure").remove()
+            // url call returning small image based off of random number 
+            var imageUrl = response.results[randomNumber].urls.small;
+            // preparing image
+            var treasureImage = $("<img>");
+            treasureImage.attr("id", "treasure")
+            treasureImage.attr("src", imageUrl);
+            treasureImage.attr("alt", "treasure image");
+            //  displaying image
+            $("#images").prepend(treasureImage);
+    
+         
+        });
+        
+    })
 
 // $(document).ready(function() {
     
