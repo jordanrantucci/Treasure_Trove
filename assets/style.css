@@ -112,6 +112,12 @@ form{
   margin-right:auto;
 }
 
+.treasure-images{
+  margin-left:auto;
+  margin-right:auto;
+  text-align: center;
+}
+
 #myMap{
   position:relative;
   width:600px;
