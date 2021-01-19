@@ -51,7 +51,7 @@ function locateTreasure(){
         });
         console.log($("#latitude").val(),$("#longitude").val())
 
-        let center = map.getCenter();
+        let center = map.getCenter()
 
         let bingAPIurl= "https://dev.virtualearth.net/REST/v1/Locations/"+$("#latitude").val().toString()+","+$("#longitude").val().toString()+"?o=json&key=Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd"
              
@@ -76,7 +76,7 @@ function locateTreasure(){
         //Create an infobox at the center of the map but don't show it.
         infobox = new Microsoft.Maps.Infobox(map.getCenter(), {
             visible: false
-        });
+        })
         //Assign the infobox to a map instance.
         infobox.setMap(map);
 
@@ -93,7 +93,7 @@ function locateTreasure(){
         pin.metadata = {
             title: $("#treasureTitle").val(),
             description: $("#treasureDescription").val()
-        };
+        }
 
         //Set local storage to save treasure info
         for (i=0; i<savedTreasureArray.length; i++){
@@ -105,10 +105,10 @@ function locateTreasure(){
         }
         
         //Add a click event handler to the pushpin.
-        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked);
+        Microsoft.Maps.Events.addHandler(pin, 'click', pushpinClicked)
 
         //Add pushpin to the map.
-        map.entities.push(pin);
+        map.entities.push(pin)
 
         Microsoft.Maps.Events.addHandler(pin, 'drag', function (e) { 
             locate('pushpinDrag', e)
@@ -132,7 +132,7 @@ function locateTreasure(){
                 title: e.target.metadata.title,
                 description: e.target.metadata.description,
                 visible: true
-            });
+            })
         }
     }
     
@@ -159,11 +159,11 @@ $("#clearLocations").on("click", clearBtnClk)
 
 // click function for treasure button
 $("#treasure-btn").on("click", function() {
-    //    clears content before loading results
+        //clears content before loading results
         $(".image-container").empty()
         // defining endpoint for api call
         var unsplashURL = "https://api.unsplash.com/search/photos?query=treasure&per_page=30&client_id=R2a__tWdYYp-v6teauC_XnmRvIFWApfcH2KipS4BRY8";
-    // api call using ajax
+        // api call using ajax
         $.ajax({
             url: unsplashURL,
             method: "GET"
@@ -172,17 +172,17 @@ $("#treasure-btn").on("click", function() {
         .then(function(response) {
             // random number between 1-30
             var randomNumber = Math.floor(Math.random() * 30) + 1;
-        //  removing initial treasure image 
+            //  removing initial treasure image 
             $("#treasure").remove()
             // url call returning small image based off of random number 
-            var imageUrl = response.results[randomNumber].urls.small;
+            var imageUrl = response.results[randomNumber].urls.small
             // preparing image
             var treasureImage = $("<img>");
             treasureImage.attr("id", "treasure")
-            treasureImage.attr("src", imageUrl);
-            treasureImage.attr("alt", "treasure image");
+            treasureImage.attr("src", imageUrl)
+            treasureImage.attr("alt", "treasure image")
             //  displaying image
-            $("#images").prepend(treasureImage);
+            $("#images").prepend(treasureImage)
     
          
         });
