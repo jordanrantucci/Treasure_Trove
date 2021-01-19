@@ -31,19 +31,6 @@
                         <a class="nav-link" href="./treasurechest.html">Treasure Chest <span class="sr-only">(current)</span></a>
                     </li>
         </nav>
-    
-
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item active">
-                        <a class="nav-link" href="map.html">Map <span class="sr-only">(current)</span></a>
-                    </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="treasurechest.html">Treasure Chest <span class="sr-only">(current)</span></a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
 
         <!--Title-->
         <h1 class="col-12">Show where ye discovered yer booty!</h1>
@@ -55,24 +42,24 @@
         <container class="row"> <!--container for map section-->
             <div class="col-1"></div>
             <form id="mapLocationForm" class="col-5">
-                <fieldset class="text-box col-6">
+                <fieldset class="text-box col-5">
                     <h3>Enter Treasure Information</h3>
                     <p>
-                        <label>Title</label><br>
-                        <input type="text" id="treasureTitle"  value="enter title" />
+                        <label class="label">Title</label><br>
+                        <input class= "textbox" type="text" id="treasureTitle"  value="enter title" />
                     </p>
                     <p>
-                        <label>Short Description</label><br>
-                        <input type="text" id="treasureDescription" value="enter description" />
+                        <label class="label">Short Description</label><br>
+                        <input class= "textbox" type="text" id="treasureDescription" value="enter description" />
                     </p>
                 
                     <p>
-                        <label>Enter Latitude Where Found</label><br>
-                        <input type="text" id="latitude" value="latitude" />
+                        <label class="label">Enter Latitude Where Found</label><br>
+                        <input class= "textbox" type="text" id="latitude" value="latitude" />
                     </p>
                     <p>
-                        <label>Enter Longitude Where Found</label><br>
-                        <input type="text" id="longitude" value="longitude" />
+                        <label class="label">Enter Longitude Where Found</label><br>
+                        <input class = "textbox" type="text" id="longitude" value="longitude" />
                     </p>
                     <!--buttons for locating treasure and clearing pins which clears local storage on click-->
                     <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
@@ -90,7 +77,7 @@
             <h4 class="col-12">Pin Location: <span id="pinLocation"></span></h4>
         </div>
 
-        <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
+        <div id="myMap">
         </div>
     
         <footer> 
