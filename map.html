@@ -14,7 +14,7 @@
         <title>Map</title>
          
     </head>
-    <body>
+    <body> <!--Navbar-->
         <nav class="navbar navbar-expand-lg navbar-light bg-light">
             <a class="navbar-brand" href="./index.html">Treasure Trove</a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -45,14 +45,14 @@
             </div>
         </nav>
 
-
+        <!--Title-->
         <h1 class="col-12">Show where ye discovered yer booty!</h1>
 
-        <div class = "text-box col-12">
+        <div class = "text-box col-12"> <!--text box-->
             <h2>Use th' map below t' see th' locations o' th' treasure</h2>
         </div>
 
-        <container class="row">
+        <container class="row"> <!--container for map section-->
             <div class="col-1"></div>
             <form id="mapLocationForm" class="col-5">
                 <fieldset class="text-box col-6">
@@ -74,27 +74,27 @@
                         <label>Enter Longitude Where Found</label><br>
                         <input type="text" id="longitude" value="longitude" />
                     </p>
-                    
+                    <!--buttons for locating treasure and clearing pins which clears local storage on click-->
                     <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
                     <button type="button" class="btn btn-light" id="clearLocations">Clear All Treasure Pins</button>
                 </fieldset>
             </form>
-            <container class="col-5" id="pastLocations">
+            <container class="col-5" id="pastLocations"> <!--container for past locations to be displayed-->
                 <h3>Saved Treasure Locations</h3>
                 <div id="pastLocationsDivOnly"></div>
             </container>
             <div class="col-1"></div>
         </container>
         <div class="row" id="pinLocationDiv">
-            <h3 class="col-9" id="dragInstructions"><br>Not quite right? Click and drag the X to do some fine-tuning. Once you're in the right spot, re-enter the coordinates above and Locate ye' treasure!</h3>
+            <h3 class="col-9" id="dragInstructions"><br>Not quite right? Click and drag the X to do some fine-tuning. Once you're in the right spot, re-enter the coordinates above and locate ye' treasure!</h3>
             <h4 class="col-12">Pin Location: <span id="pinLocation"></span></h4>
         </div>
 
         <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
         </div>
     
-        <footer>
-            <p>What is a pirate's favorite letter? **click treasure chest to see the answer**</p>
+        <footer> 
+            <p>What is a pirate's favorite letter? **click Treasure Chest to see the answer**</p>
         </footer>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
