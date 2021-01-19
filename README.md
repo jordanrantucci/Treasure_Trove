@@ -35,6 +35,7 @@ The following image demonstrates the application functionality:
 * [Credits](#credits)
 * [Contributing](#contributing)
 * [Tests](#tests)
+* [Future](#future)
 
 
 ## Installation
@@ -60,5 +61,9 @@ Contributions in the form of suggestions or feedback are appreciated.
 ## Tests
 
 There are no tests for this project.
+
+## Future 
+
+Would like to include photo uploading and also the ability to pull a users Instagram posts into future build outs of this application. 
 
 ---
