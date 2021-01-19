@@ -25,7 +25,9 @@ Deployed application link: (https://jordanrantucci.github.io/Project_1_Treasure_
 
 The following image demonstrates the application functionality:
 
-![weather dashboard demo](./add images of the page site)
+<img src = "./assets/images/Treasure_Trove.jpg">
+<img src = "./assets/images/map_example.jpg">
+<img src = "./assets/images/treasure_chest_example.jpg">
 
 
 ## Table of Contents
