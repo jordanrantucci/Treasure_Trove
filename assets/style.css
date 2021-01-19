@@ -114,7 +114,7 @@ form{
   margin-right:auto
 }
 
- @media screen and (max-width: 890px) {
+@media screen and (max-width: 890px) {
   /* The body's bg color will be #333 */
   .textbox {
     width: 100px;
