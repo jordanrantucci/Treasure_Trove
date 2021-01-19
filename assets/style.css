@@ -80,7 +80,6 @@ footer{
   display: block;
   margin-left: auto;
   margin-right: auto;
-  width: 50%;
 }
 legend{
   font-family: 'Pirata One', cursive;
@@ -89,6 +88,13 @@ legend{
 form{
   font-family: 'Pirata One', cursive;
   color:rgb(8, 8, 8);
+}
+
+.formFieldset{
+  text-align: center;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .image-container{
@@ -102,28 +108,51 @@ form{
 }
 
 #treasure-form{
-  padding: 20px;
-  margin-left: 27%;
+  margin-left:auto;
+  margin-right:auto;
 }
 
-#myMap {
+#myMap{
   position:relative;
   width:600px;
   height:400px;
   margin-left:auto;
-  margin-right:auto
+  margin-right:auto;
+}
+
+#formDiv{
+  margin-left:auto;
+  margin-right:auto;
+}
+
+#label{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#textbox{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 @media screen and (max-width: 890px) {
   /* The body's bg color will be #333 */
   .textbox {
     width: 100px;
+    margin-left: auto;
+    margin-right: auto
   }
   .label {
     font-size: 20px;
+    margin-left: auto;
+    margin-right: auto
   }
   h3 {
     font-size: 22px;
+    margin-left: auto;
+    margin-right: auto
   }
 }
 
@@ -135,10 +164,11 @@ form{
 }
 
 @media screen and (max-width: 375px) {
-  /* The body's bg color will be #333 */
   .textbox {
     width: 75px;
     font-size: 14px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .label {
     font-size: 18px;
@@ -156,7 +186,9 @@ form{
 #mapLocationForm {
   border: dashed 2px black;
   text-align: center;
-  background-color: rgba(255, 255, 255, 0.479)
+  background-color: rgba(255, 255, 255, 0.479);
+  margin-left: auto;
+  margin-right: auto;
 }
 
 #pastLocations{
