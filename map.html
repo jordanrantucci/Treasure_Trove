@@ -46,63 +46,63 @@
         </nav>
 
 
-    <h1 class="col-12">Show where ye discovered yer booty!</h1>
+        <h1 class="col-12">Show where ye discovered yer booty!</h1>
 
-    <div class = "text-box col-12">
-        <h2>Use th' map below t' see th' locations o' th' treasure</h2>
-    </div>
+        <div class = "text-box col-12">
+            <h2>Use th' map below t' see th' locations o' th' treasure</h2>
+        </div>
 
-    <container class="row">
-        <div class="col-1"></div>
-        <form id="mapLocationForm" class="col-5">
-            <fieldset class="text-box col-6">
-                <h3>Enter Treasure Information</h3>
-                <p>
-                    <label>Title</label><br>
-                    <input type="text" id="treasureTitle"  value="enter title" />
-                </p>
-                <p>
-                    <label>Short Description</label><br>
-                    <input type="text" id="treasureDescription" value="enter description" />
-                </p>
-            
-                <p>
-                    <label>Enter Latitude Where Found</label><br>
-                    <input type="text" id="latitude" value="latitude" />
-                </p>
-                <p>
-                    <label>Enter Longitude Where Found</label><br>
-                    <input type="text" id="longitude" value="longitude" />
-                </p>
+        <container class="row">
+            <div class="col-1"></div>
+            <form id="mapLocationForm" class="col-5">
+                <fieldset class="text-box col-6">
+                    <h3>Enter Treasure Information</h3>
+                    <p>
+                        <label>Title</label><br>
+                        <input type="text" id="treasureTitle"  value="enter title" />
+                    </p>
+                    <p>
+                        <label>Short Description</label><br>
+                        <input type="text" id="treasureDescription" value="enter description" />
+                    </p>
                 
-                <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
-                <button type="button" class="btn btn-light" id="clearLocations">Clear All Treasure Pins</button>
-            </fieldset>
-        </form>
-        <container class="col-5" id="pastLocations">
-            <h3>Saved Treasure Locations</h3>
-            <div id="pastLocationsDivOnly"></div>
+                    <p>
+                        <label>Enter Latitude Where Found</label><br>
+                        <input type="text" id="latitude" value="latitude" />
+                    </p>
+                    <p>
+                        <label>Enter Longitude Where Found</label><br>
+                        <input type="text" id="longitude" value="longitude" />
+                    </p>
+                    
+                    <button type="button" class="btn btn-dark" id="locateTreasure">Locate Treasure</button>
+                    <button type="button" class="btn btn-light" id="clearLocations">Clear All Treasure Pins</button>
+                </fieldset>
+            </form>
+            <container class="col-5" id="pastLocations">
+                <h3>Saved Treasure Locations</h3>
+                <div id="pastLocationsDivOnly"></div>
+            </container>
+            <div class="col-1"></div>
         </container>
-        <div class="col-1"></div>
-    </container>
-    <div class="row" id="pinLocationDiv">
-        <h3 class="col-9" id="dragInstructions"><br>Not quite right? Click and drag the X to do some fine-tuning. Once you're in the right spot, re-enter the coordinates above and Locate ye' treasure!</h3>
-        <h4 class="col-12">Pin Location: <span id="pinLocation"></span></h4>
-    </div>
+        <div class="row" id="pinLocationDiv">
+            <h3 class="col-9" id="dragInstructions"><br>Not quite right? Click and drag the X to do some fine-tuning. Once you're in the right spot, re-enter the coordinates above and Locate ye' treasure!</h3>
+            <h4 class="col-12">Pin Location: <span id="pinLocation"></span></h4>
+        </div>
 
-    <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
-    </div>
+        <div id="myMap" style="position:relative;width:600px;height:400px;margin-left:auto;margin-right:auto">
+        </div>
     
-    <footer>
-        <p>What is a pirate's favorite letter? **click treasure chest to see the answer**</p>
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script type='text/javascript'
-            src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd' 
-            async defer>
-    </script>
-    <script type='text/javascript' src='script.js'></script>
+        <footer>
+            <p>What is a pirate's favorite letter? **click treasure chest to see the answer**</p>
+        </footer>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script type='text/javascript'
+                src='https://www.bing.com/api/maps/mapcontrol?callback=GetMap&key=Ak7rhv8TWx72_u6d8FHAVdPA01BfBGAr_JYJux65cv8uHVpMCUSGhlLsce-tKdnd' 
+                async defer>
+        </script>
+        <script type='text/javascript' src='script.js'></script>
     </body>
 </html>
