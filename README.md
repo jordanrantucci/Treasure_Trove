@@ -21,7 +21,7 @@ App is responsive and easy to use.
 We worked together to make sure we made many GitHub commits and were sure to review work in order to eliminate any merge issues.
 
 
-Deployed application link: (https://jordanrantucci.github.io/Project_1_Treasure_Trove/)
+Deployed application link: (https://jordanrantucci.github.io/Treasure_Trove/)
 
 The following image demonstrates the application functionality:
 
